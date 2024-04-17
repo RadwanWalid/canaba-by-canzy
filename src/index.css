@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lemon Milk';
+  background-color: #F5F5F5;
+  overflow-x: hidden;
+}
+
+.glitch-effect {
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.glitch-effect:before,
+.glitch-effect:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.glitch-effect:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.glitch-effect:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  border-color: #4b5563;
+}
+
+.carousel-track {
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 24px;
+  width: 200%;
+  animation: slide 20s linear infinite;
+  /* &:hover {
+      animation-play-state: paused;
+  } */
+}
+
+.about-gradient {
+  background-size: 100% 100%;
+  background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+  background-image: radial-gradient(49% 81% at 45% 47%, #F5F5F5 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #D8DCFFFF 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #CEC6FFFF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #F5F5F5 1%, #FF000000 99%),radial-gradient(100% 91% at 111% 84%, #f5f5f5 0%, #FFFFFFFF 100%);
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@font-face {
+  font-family: 'Lemon Milk';
+  src: url(/fonts/LEMONMILK-Regular.otf);
+}
