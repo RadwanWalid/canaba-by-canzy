@@ -1,6 +1,6 @@
-type Props = {}
 
-const About = (props: Props) => {
+
+const About = () => {
 
   const aboutCanz: string[] = ['Coffee Addict', 'Talkative', 'Producing', 'Car Lady', 'Blogs', 'Spontaneous', 'Dog Mom', 'Photography', 'Filming', 'Antiques Collector', 'Good Listener', 'Trying New Things', 'Notebooks Collector', 'Doodling', 'Movies over Series', 'Journaling']; 
 

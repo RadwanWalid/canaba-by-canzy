@@ -1,8 +1,8 @@
 import { Parallax } from "react-scroll-parallax";
 
-type Props = {};
+;
 
-const Home = (props: Props) => {
+const Home = () => {
 
   const words1: string[] = ['Authenticity', 'Uplifting', 'Creativity', 'Support', 'Ambition', 'Changing Perspectives', 'Milestones', 'Personal Jounrey', 'Inspiring Moments', 'Self Improvements', 'Overcoming Challenges', 'Personal Growth', 'Inspirational Stories'];
   const words2: string[] = ['Changing Perspectives', 'Milestones', 'Personal Jounrey', 'Inspiring Moments', 'Self Improvements', 'Overcoming Challenges', 'Personal Growth', 'Inspirational Stories', 'Authenticity', 'Uplifting', 'Creativity', 'Support', 'Ambition'];

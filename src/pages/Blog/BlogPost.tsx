@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 
-type Props = {}
 
-const BlogPost = (props: Props) => {
+
+const BlogPost = () => {
     const { id } = useParams();
   return (
     <div>BlogPost {id}</div>

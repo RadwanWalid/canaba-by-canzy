@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-type Props = {}
 
-const Navbar = (props: Props) => {
+
+const Navbar = () => {
 
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
 

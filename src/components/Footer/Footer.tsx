@@ -1,6 +1,4 @@
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <div className="relative overflow-hidden flex items-center justify-around space-x-8 min-h-[16rem] bg-[#E0E0E0] mt-14">
       {/* <img className="w-full h-auto absolute -top-10 scale-x-105 -right-56 -rotate-12 z-0" src="/svgs/Abstract Lines.svg" /> */}
