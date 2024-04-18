@@ -13,16 +13,16 @@ const Home = () => {
   return (
     <div className="space-y-32">
       <div className="flex items-center justify-center space-x-16 px-20">
-        <Parallax translateX={['0%', '-100%']} opacity={[1, -1]} rootMargin={{ top: -400, left: 0, right: 0, bottom: 600 }}>
-          <img className="h-auto w-72 glitch-effect relative right-8" src="/svgs/Can You Keep It Together.svg" />
+        <Parallax className="flex-1" translateX={['0%', '-100%']} opacity={[1, -1]} rootMargin={{ top: -400, left: 0, right: 0, bottom: 100 }}>
+          <img className="h-auto w-72 glitch-effect" src="/svgs/Can You Keep It Together Bold.svg" />
         </Parallax>
         <Parallax translateY={['0%', '-100%']} rootMargin={{ top: -600, left: 0, right: 0, bottom: 400 }} className="relative flex items-center justify-center h-[34rem] w-[34rem]">
           {/* <div className="h-96 w-96 rounded-full bg-[#0D2979]" /> */}
           <img className="h-[34rem] relative top-1 rotate-0 scale-y-110" src="/svgs/Doodling.svg" />
           <img className="absolute h-[26rem]" src="/no background.png" />
         </Parallax>
-        <Parallax translateX={['0%', '100%']} opacity={[1, -1]} rootMargin={{ top: -400, left: 0, right: 0, bottom: 200 }}>
-        <img className="h-auto w-36 glitch-effect" src="/svgs/Yes or No.svg" />
+        <Parallax className="flex-1" translateX={['0%', '100%']} opacity={[1, -1]} rootMargin={{ top: -400, left: 0, right: 0, bottom: 0 }}>
+          <img className="h-auto w-28 glitch-effect" src="/svgs/Yes or No Bold.svg" />
         </Parallax>
       </div>
 
@@ -43,7 +43,7 @@ const Home = () => {
       <div className="flex items-center justify-between overflow-hidden">
         <Parallax className="flex-1 pl-20" rootMargin={{ top: 200, left: 0, right: 0, bottom: -400 }} translateX={['-50%', '0%']} opacity={[-1, 1]}>
           <div className="space-y-6">
-            <h1 className="text-5xl">Women in Egypt?</h1>
+            <h1 className="text-5xl">Women in Egypt<span className="text-primary italic">?</span></h1>
             <p className="text-xl">NOT AS A MATTER OF RIGHTS, BUT AS A MATTER OF RESPECT & BEHAVIOURAL CHANGE.</p>
           </div>
         </Parallax>

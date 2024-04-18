@@ -1,16 +1,15 @@
 import { useState } from "react"
-
-
+import { IoSearch } from "react-icons/io5";
 
 const Navbar = () => {
 
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
 
   return (
-    <div className="flex items-center justify-between pt-4 mb-2 h-14 px-12">
+    <div className="flex items-center justify-between pt-4 mb-2 h-14 px-12 z-50 relative">
       <div className="flex-1 relative flex items-center h-10 hover:drop-shadow-sm transition-all duration-300">
         <button onClick={() => setIsSearchOpen(!isSearchOpen)} className={`h-10 w-10 p-1 ${ isSearchOpen ? 'rounded-l-md': 'rounded-md' } bg-[#121212] hover:bg-primary transition-all duration-300`}>
-          <img className="h-full w-auto" src="/svgs/Search.svg" />
+          <IoSearch className="text-white h-full w-full" />
         </button>
         <input placeholder="Search" className={`${ !isSearchOpen ? 'w-0 pl-0 border-0': 'w-52 pl-2 border-2'} h-10 rounded-r-md py-1.5 outline-none border-l-0 border-[#E5E5E5] transition-all duration-300`} />
       </div>
