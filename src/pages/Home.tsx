@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 
 ;
@@ -9,19 +10,32 @@ const Home = () => {
   const words3: string[] = ['Personal Jounrey', 'Inspiring Moments', 'Self Improvements', 'Overcoming Challenges', 'Personal Growth', 'Inspirational Stories', 'Authenticity', 'Uplifting', 'Creativity', 'Support', 'Ambition', 'Changing Perspectives', 'Milestones'];
   const words4: string[] = ['Overcoming Challenges', 'Personal Growth', 'Inspirational Stories', 'Authenticity', 'Uplifting', 'Creativity', 'Support', 'Ambition', 'Changing Perspectives', 'Milestones', 'Personal Jounrey', 'Inspiring Moments', 'Self Improvements'];
 
+  const [windowHeight, setWindowHeight] = useState<number>(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className="space-y-32">
       <div className="flex items-center justify-center space-x-16 px-20">
-        <Parallax className="flex-1" translateX={['0%', '-100%']} opacity={[1, -1]} rootMargin={{ top: -400, left: 0, right: 0, bottom: 100 }}>
+        <Parallax className="flex-1 flex justify-end" translateX={['0%', '-100%']} opacity={[1, -1]} rootMargin={{ top: windowHeight <= 576 ? -400: -750, left: 0, right: 0, bottom: 0 }}>
           <img className="h-auto w-72 glitch-effect" src="/svgs/Can You Keep It Together Bold.svg" />
         </Parallax>
-        <Parallax translateY={['0%', '-100%']} rootMargin={{ top: -600, left: 0, right: 0, bottom: 400 }} className="relative flex items-center justify-center h-[34rem] w-[34rem]">
+        <Parallax translateY={['0%', '-100%']} rootMargin={{ top: windowHeight <= 576 ? -600: -900, left: 0, right: 0, bottom: windowHeight <= 576 ? 400: 100 }} className="relative flex items-center justify-center h-[34rem] w-[34rem]">
           {/* <div className="h-96 w-96 rounded-full bg-[#0D2979]" /> */}
           <img className="h-[34rem] relative top-1 rotate-0 scale-y-110" src="/svgs/Doodling.svg" />
           <img className="absolute h-[26rem]" src="/no background.png" />
         </Parallax>
-        <Parallax className="flex-1" translateX={['0%', '100%']} opacity={[1, -1]} rootMargin={{ top: -400, left: 0, right: 0, bottom: 0 }}>
+        <Parallax className="flex-1" translateX={['0%', '100%']} opacity={[1, -1]} rootMargin={{ top: windowHeight <= 576 ? -400: -750, left: 0, right: 0, bottom: 0 }}>
           <img className="h-auto w-28 glitch-effect" src="/svgs/Yes or No Bold.svg" />
         </Parallax>
       </div>
