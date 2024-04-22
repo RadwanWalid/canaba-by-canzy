@@ -8,6 +8,12 @@ export default {
     extend: {
       colors: {
         primary: '#161FFF',
+      },
+      screens: {
+        blog: { 'max': '946px' },
+        blogsm: { 'max': '628px' },
+        nav: { 'max' : '790px' },
+        'sm-max': { 'max': '639px' }
       }
     },
   },

@@ -50,15 +50,15 @@ const Blog = () => {
 
   return (
     <div className="relative bottom-16 pt-24">
-      <div className="py-6 border-y-2 mb-8 border-[#D0D0D0]">
-        <h1 className="text-9xl text-center font-bold">The Blog</h1>
-        <p className="text-center text-[#606060] max-w-[52rem] mt-4 mx-auto">Welcome to a world of limitless possibilities, where the journey is as exhilarating as the destination, and where every moment is an opportunity to make your mark on the canvas of existence. The only limit is the extent of your imagination.</p>
+      <div className="py-6 border-y-2 mb-8 border-[#D0D0D0] mx-4">
+        <h1 className="text-9xl text-center font-bold blogsm:text-6xl">The Blog</h1>
+        <p className="text-center text-[#606060] max-w-[52rem] blogsm:text-xs mt-4 mx-auto">Welcome to a world of limitless possibilities, where the journey is as exhilarating as the destination, and where every moment is an opportunity to make your mark on the canvas of existence. The only limit is the extent of your imagination.</p>
       </div>
-      <div className="flex items-start mx-10 mt-14 space-x-20">
+      <div className="flex items-start mx-10 blog:mx-5 mt-14 space-x-20 blog:flex-col blog:space-x-0 blog:space-y-10">
         <div className="flex-1 text-center relative">
           <BlogCard data={blogs[0]} size="large" alignment="vertical" />
         </div>
-        <div className="flex-1 text-center space-y-16">
+        <div className="flex-1 text-center space-y-16 w-full">
           {
             blogs.slice(1, 4).map((data, index) => (
               <BlogCard data={data} key={index} size="normal" alignment="horizontal" />
@@ -66,9 +66,9 @@ const Blog = () => {
           }
         </div>
       </div>
-      <div className="space-y-24 mt-32">
-        <h1 className="text-6xl text-center font-bold">Explore Other Blogs</h1>
-        <div className="flex items-start justify-center space-x-28 px-10">
+      <div className="space-y-24 blog:space-y-10 blog:mt-20 mt-32 flex flex-col justify-center items-center">
+        <h1 className="text-6xl blogsm:text-4xl text-center font-bold">Explore Other Blogs</h1>
+        <div className="flex items-start justify-center space-x-28 blog:grid blog:grid-cols-2 blog:gap-x-20 blog:gap-y-8 blogsm:grid-cols-1 blog:space-x-0">
           <BlogCard data={blogs[0]} size="normal" alignment="vertical" />
           {
             blogs.slice(4, blogs.length).map((data, index) => (
