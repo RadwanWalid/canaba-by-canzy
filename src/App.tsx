@@ -6,7 +6,7 @@ import Blog from './pages/Blog/Blog'
 import BlogPost from './pages/Blog/BlogPost'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import Gallery from './pages/Gallery'
+import Episodes from './pages/Episodes'
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
             <Route path="About" element={<About />} />
             <Route path="Blog" element={<Blog />} />
             <Route path="/Blog/:id" element={<BlogPost />} />
-            <Route path="Gallery" element={<Gallery />} />
+            <Route path="Episodes" element={<Episodes />} />
           </Route>
         </Routes>
       </BrowserRouter>

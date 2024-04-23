@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false);
 
   return (
-    <div className={`pt-4 mb-2 h-14 px-12 z-50 blog:bg-[#F5F5F5] ${ isNavbarOpen ? 'blog:h-screen': 'blog:h-[4.5rem]'} overflow-hidden blog:sticky blog:top-0 relative transition-all duration-200`}>
+    <div className={`pt-4 mb-2 h-14 px-12 z-50 nav:bg-[#F5F5F5] ${ isNavbarOpen ? 'nav:h-screen': 'nav:h-[4.5rem]'} overflow-hidden nav:sticky nav:top-0 relative transition-all duration-200`}>
       <button onClick={() => setIsNavbarOpen(!isNavbarOpen)} className="group absolute top-6 right-7 hidden nav:block w-8 space-y-1.5">
           <div className={`h-1 bg-black w-full rounded-full relative ${ isNavbarOpen && 'top-2.5 rotate-45' } group-hover:top-2.5 group-hover:rotate-45 transition-all duration-200`} />
           <div className={`h-1 bg-black w-full rounded-full relative ${ isNavbarOpen && 'opacity-0' } group-hover:opacity-0 transition-all duration-200`} />
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="flex-1 flex items-center justify-end space-x-12 text-sm nav:text-lg nav:flex-col nav:space-x-0 nav:items-start nav:space-y-6 nav:mt-28">
           <a href="/About" className="pt-px h-fit rounded-full w-fit whitespace-nowrap z-10 relative transition-all duration-300 after:content-[''] after:absolute after:-bottom-px after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-all after:duration-500 hover:after:opacity-100 after:opacity-100 after:scale-0 after:origin-center hover:after:scale-100 items-center justify-center block">About</a>
           <a href="/Blog" className="pt-px h-fit rounded-full w-fit whitespace-nowrap z-10 relative transition-all duration-300 after:content-[''] after:absolute after:-bottom-px after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-all after:duration-500 hover:after:opacity-100 after:opacity-100 after:scale-0 after:origin-center hover:after:scale-100 items-center justify-center block">Blog</a>
-          <a href="/Gallery" className="pt-px h-fit rounded-full w-fit whitespace-nowrap z-10 relative transition-all duration-300 after:content-[''] after:absolute after:-bottom-px after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-all after:duration-500 hover:after:opacity-100 after:opacity-100 after:scale-0 after:origin-center hover:after:scale-100 items-center justify-center block">Gallery</a>
+          <a href="/Episodes" className="pt-px h-fit rounded-full w-fit whitespace-nowrap z-10 relative transition-all duration-300 after:content-[''] after:absolute after:-bottom-px after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-all after:duration-500 hover:after:opacity-100 after:opacity-100 after:scale-0 after:origin-center hover:after:scale-100 items-center justify-center block">Episodes</a>
         </div>
       </div>
     </div>
