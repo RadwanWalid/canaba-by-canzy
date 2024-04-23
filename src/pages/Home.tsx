@@ -36,7 +36,7 @@ const Home = () => {
         </div>
         <div style={{ transform: `translateY(-${offsetY * 0.9}px)` }} className="relative flex-1 flex items-center justify-center blog:mx-4">
           <img className="h-[34rem] relative top-1 rotate-0 scale-y-110 blog:h-[28rem] blog:left-1.5 blog:top-3 blog:scale-[0.85]" src="/svgs/Doodling.svg" />
-          <img className="absolute scale-125 blog:w-72" src="/no background.png" />
+          <img className="absolute scale-125 blog:w-72" src="/images/no background.png" />
         </div>
         <div style={{ transform: `translateX(${(offsetY * 0.8) + (width <= 946 ? 0: 90)}px) ${ width <= 946 ? 'rotate(-30deg)': 'rotate(0deg)' }`, opacity: `${ (100 - (offsetY * 0.25)) / 100 }` }} className="relative flex-1 blog:flex-none blog:absolute blog:-right-3 top-20 blog:top-4 flex justify-start z-10">
           <img className="h-auto w-72 blog:w-32 aspect-square glitch-effect" src="/svgs/Yes or No Bold.svg" />

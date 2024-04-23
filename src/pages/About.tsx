@@ -22,7 +22,7 @@ const About = () => {
         <div className="flex flex-1 relative">
           <div className="flex-1 h-fit relative py-4 overflow-hidden rounded-xl">
             <div className="about-gradient -z-10 absolute top-0 left-0 right-0 bottom-0" />
-            <img className="h-auto py-2 mx-auto min-w-full" src="/no background.png" />
+            <img className="h-auto py-2 mx-auto min-w-full" src="/images/no background.png" />
           </div>
           <h1 className="absolute -right-80 top-2 text-6xl blog:-right-9 blog:-indent-8 blog:-top-12 blog:text-3xl">So, <br className="hidden blog:block" /> who am I?</h1>
         </div>
@@ -53,8 +53,8 @@ const About = () => {
           <p className="text-lg blog:text-sm">We're all about diving into fascinating conversations that open your eyes to new perspectives, sharing exciting adventures that'll keep you on the edge of your seat, and telling heartwarming stories that'll lift your spirits. And guess what? We're shining a spotlight on some incredible people making a difference in our community. So, grab a snack, get comfy, and join us for some feel-good vibes and inspiring tales!</p>
         </div>
         <div className="flex items-center justify-center w-96 relative blog:w-full blog:absolute blog:top-0 blog:-z-10">
-          <img className="absolute -top-12 blog:top-4 blog:right-10 h-auto w-[26rem] min-w-[26rem] blog:w-32 blog:min-w-32 -scale-x-100 -rotate-45" src="/blogs/Podcast Doodle.svg" />
-          <img className="h-auto w-52 min-w-52 blog:w-16 blog:min-w-16 blog:left-7 blog:top-8 relative right-3" src="/blogs/About Podcast.svg" />
+          <img className="absolute -top-12 blog:top-4 blog:right-10 h-auto w-[26rem] min-w-[26rem] blog:w-32 blog:min-w-32 -scale-x-100 -rotate-45" src="/svgs/Podcast Doodle.svg" />
+          <img className="h-auto w-52 min-w-52 blog:w-16 blog:min-w-16 blog:left-7 blog:top-8 relative right-3" src="/svgs/About Podcast.svg" />
         </div>
       </div>
     </div>
