@@ -65,7 +65,7 @@ const About = () => {
           <p className="text-lg blog:text-sm">We're all about diving into fascinating conversations that open your eyes to new perspectives, sharing exciting adventures that'll keep you on the edge of your seat, and telling heartwarming stories that'll lift your spirits. And guess what? We're shining a spotlight on some incredible people making a difference in our community. So, grab a snack, get comfy, and join us for some feel-good vibes and inspiring tales!</p>
         </div>
         <div className="flex items-center justify-center w-96 relative blog:w-full blog:absolute blog:top-0 blog:-z-10">
-          <img className="absolute -top-12 blog:top-4 blog:right-10 h-auto w-[26rem] min-w-[26rem] blog:w-32 blog:min-w-32 -scale-x-100 -rotate-45" src="/svgs/Podcast Doodle.svg" />
+          <img className="absolute -top-12 blog:top-4 blog:right-10 h-auto w-[26rem] min-w-[26rem] blog:w-32 blog:min-w-32 -scale-x-[1.05] scale-110 -rotate-45" src="/svgs/Podcast Doodle.svg" />
           <img className="h-auto w-52 min-w-52 blog:w-16 blog:min-w-16 blog:left-7 blog:top-8 relative right-3" src="/svgs/About Podcast.svg" />
         </div>
       </div>

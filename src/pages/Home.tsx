@@ -69,7 +69,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div ref={womenInEgyptRef} className="relative flex items-center justify-between overflow-hidden blog:flex-col-reverse blog:w-full blog:px-4">
+      <div ref={womenInEgyptRef} className="relative flex items-center justify-between overflow-hidden blog:flex-col-reverse blog:space-y-reverse blog:space-y-3 blog:w-full blog:px-4">
         <div style={{ transform: `translateX(${womenInEgyptRef.current && Math.min(0, (offsetY - Math.abs(womenInEgyptRef.current?.getBoundingClientRect().top) - 350) * 0.6)}px)` }} className="flex-1 pl-20 blog:pl-0 blog:text-center">
           <div className="space-y-6 blog:space-y-2 blog:px-40 blogsm:px-2">
             <h1 className="text-5xl blog:text-3xl">Women in Egypt<span className="text-primary italic">?</span></h1>
