@@ -6,24 +6,26 @@ import BlogPost from './pages/Blog/BlogPost'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Episodes from './pages/Episodes'
+import Search from './pages/Search'
 
 function App() {
 
   return (
     <div>
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route>
             <Route index path="/" element={<Home />} />
-            <Route path="About" element={<About />} />
-            <Route path="Blog" element={<Blog />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Blog" element={<Blog />} />
             <Route path="/Blog/:id" element={<BlogPost />} />
-            <Route path="Episodes" element={<Episodes />} />
+            <Route path="/Episodes" element={<Episodes />} />
+            <Route path="/Search" element={<Search />} />
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   )
 }
