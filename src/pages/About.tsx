@@ -54,7 +54,7 @@ const About = () => {
         </div>
         <div className="flex items-center justify-center w-96 relative blog:w-full blog:absolute blog:top-0 blog:-z-10">
           <img className="absolute -top-12 blog:top-4 blog:right-10 h-auto w-[26rem] min-w-[26rem] blog:w-32 blog:min-w-32 -scale-x-100 -rotate-45" src="/blogs/Podcast Doodle.svg" />
-          <img className="h-auto w-52 min-w-52 blog:w-16 blog:min-w-16 blog:left-8 blog:top-7 relative right-3" src="/blogs/About Podcast.svg" />
+          <img className="h-auto w-52 min-w-52 blog:w-16 blog:min-w-16 blog:left-7 blog:top-8 relative right-3" src="/blogs/About Podcast.svg" />
         </div>
       </div>
     </div>

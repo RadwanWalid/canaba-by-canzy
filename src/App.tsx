@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { ParallaxProvider } from 'react-scroll-parallax'
 import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog/Blog'
@@ -11,7 +10,7 @@ import Episodes from './pages/Episodes'
 function App() {
 
   return (
-    <ParallaxProvider>
+    <div>
       <Navbar />
       <BrowserRouter>
         <Routes>
@@ -25,7 +24,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer />
-    </ParallaxProvider>
+    </div>
   )
 }
 
