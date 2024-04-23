@@ -1,5 +1,9 @@
+import YoutubePlayer from "../components/YoutubePlayer/YoutubePlayer";
 
 const Episodes = () => {
+
+  const links: string[] = ['https://www.youtube.com/embed/RsMBeBiBph0?si=aLoqSGmZG2pr5YzX', 'https://www.youtube.com/embed/U0AbAfKEGXM?si=ug2ILeU9ojdh_RvA', 'https://www.youtube.com/embed/bgs0acrZXBg?si=NNO3c32meId4t8oy'];
+
   return (
     <div className="relative space-y-14 px-16 blog:px-10">
       <div className="relative flex blog:flex-col blog:space-x-0 items-center justify-between space-x-16 h-full pt-12">
@@ -10,9 +14,7 @@ const Episodes = () => {
         </div>
         <div className="relative drop-shadow-lg shadow-2xl blog:mt-10">
           <div className="bg-primary w-full rounded-xl absolute -right-6 -top-4 bottom-4" />
-          <div className="relative h-min overflow-hidden rounded-lg w-[28.5rem] blog:w-full aspect-[560/315]">
-            <iframe className="h-full w-full" src="https://www.youtube.com/embed/RsMBeBiBph0?si=aLoqSGmZG2pr5YzX" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </div>
+          <YoutubePlayer link={links[0]} invertLoading />
         </div>
       </div>
 
@@ -21,15 +23,11 @@ const Episodes = () => {
       <div className="space-y-12">
         <h1 className="text-5xl blog:text-3xl">Recent Episodes</h1>
         <div className="grid grid-cols-2 nav:grid-cols-1 mx-auto gap-10 w-fit">
-          <div className="relative h-min overflow-hidden rounded-lg w-96 blog:w-full aspect-[560/315] drop-shadow-lg">
-            <iframe className="h-full w-full" src="https://www.youtube.com/embed/RsMBeBiBph0?si=aLoqSGmZG2pr5YzX" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </div>
-          <div className="relative h-min overflow-hidden rounded-lg w-96 blog:w-full aspect-[560/315] drop-shadow-lg">
-            <iframe className="h-full w-full" src="https://www.youtube.com/embed/U0AbAfKEGXM?si=ug2ILeU9ojdh_RvA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </div>
-          <div className="relative h-min overflow-hidden rounded-lg w-96 blog:w-full aspect-[560/315] drop-shadow-lg">
-            <iframe className="h-full w-full" src="https://www.youtube.com/embed/bgs0acrZXBg?si=NNO3c32meId4t8oy" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </div>
+          {
+            links.map((link, index) => (
+              <YoutubePlayer key={index} link={link} invertLoading={false} />
+            ))
+          }
         </div>
       </div>
     </div>

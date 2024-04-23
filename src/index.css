@@ -136,7 +136,7 @@ html {
   height: 56px;
   border-radius: 50%;
   border: 3px solid;
-  border-color: #161FFF transparent;
+  /* border-color: #161FFF transparent; */
 }
 
 @keyframes rotation {

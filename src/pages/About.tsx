@@ -6,6 +6,15 @@ const About = () => {
   const aboutCanz: string[] = ['Coffee Addict', 'Talkative', 'Producing', 'Car Lady', 'Blogs', 'Spontaneous', 'Dog Mom', 'Photography', 'Filming', 'Antiques Collector', 'Good Listener', 'Trying New Things', 'Notebooks Collector', 'Doodling', 'Movies over Series', 'Journaling']; 
 
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(0);
+  const [isImageReady, setIsImageReady] = useState<boolean>(false);
+
+  useEffect(() => {
+      const img = new Image();
+      img.onload = () => {
+          setIsImageReady(true);
+      }
+      img.src = "/images/no background.png";
+  }, [])
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -20,9 +29,12 @@ const About = () => {
       <div className="flex items-center justify-between space-x-11 mt-20 blog:mt-14 blog:flex-col blog:space-x-0">
 
         <div className="flex flex-1 relative">
-          <div className="flex-1 h-fit relative py-4 overflow-hidden rounded-xl">
+          <div className="flex-1 flex items-center justify-center h-fit relative py-4 overflow-hidden rounded-xl">
             <div className="about-gradient -z-10 absolute top-0 left-0 right-0 bottom-0" />
-            <img className="h-auto py-2 mx-auto min-w-full" src="/images/no background.png" />
+            {
+              !isImageReady ? <span className="loader after:border-[#161FFF_transparent]" />:
+              <img className="h-auto py-2 mx-auto min-w-full" src="/images/no background.png" />
+            }
           </div>
           <h1 className="absolute -right-80 top-2 text-6xl blog:-right-9 blog:-indent-8 blog:-top-12 blog:text-3xl">So, <br className="hidden blog:block" /> who am I?</h1>
         </div>

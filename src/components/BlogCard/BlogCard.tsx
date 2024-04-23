@@ -40,7 +40,7 @@ const BlogCard = (props: Props) => {
   return (
     <button onClick={goToBlogPost} className={`${props.alignment === 'horizontal' ? 'h-36 space-x-6': 'flex-col space-y-6'} group cursor-pointer relative flex ${ props.size === 'normal' && (props.alignment === 'vertical' ? 'w-min': 'w-full blog:flex-row-reverse blog:space-x-reverse') } w-full items-center justify-start`}>
         <div className={`${props.alignment === 'horizontal' ? 'min-w-60 min-h-full blog:min-h-28 blog:min-w-40': props.size === 'normal' ? 'min-w-60 min-h-36': 'min-w-full min-h-60'} overflow-hidden relative flex items-center justify-center`}>
-            {!isImageReady ? <span className="loader"></span>:
+            {!isImageReady ? <span className="loader after:border-[#161FFF_transparent]"></span>:
             <img className={`${ props.alignment === 'horizontal' ? 'object-contain': 'object-cover'} h-full w-full aspect-video`} src={props.data.image} />}
         </div>
         <div className=" text-left space-y-2">
