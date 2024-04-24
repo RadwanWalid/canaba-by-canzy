@@ -74,7 +74,7 @@ const Navbar = () => {
   }
 
   return (
-    <>
+    <nav className="relative nav:sticky nav:top-0 z-50 nav:bg-[#F5F5F5]">
       <div className={`${isSearchOpen && results.length > 0 ? ' p-4 max-h-44 w-96 border-2 blogsm:w-[calc(100%-2rem)]': ' p-0 h-0 w-0 border-0'} absolute space-y-2 top-16 z-[51] left-12 blogsm:left-4 rounded-md border-gray-300 overflow-y-auto bg-[#F5F5F5] shadow-lg transition-all duration-200`}>
         {
           results.map((result, index) => (
@@ -85,7 +85,7 @@ const Navbar = () => {
           ))
         }
       </div>
-      <div className={`pt-4 mb-2 h-14 px-12 z-50 nav:bg-[#F5F5F5] ${ isNavbarOpen ? 'nav:h-screen': 'nav:h-[4.5rem]'} overflow-hidden nav:sticky nav:top-0 relative transition-all duration-200`}>
+      <div className={`pt-4 mb-2 h-14 px-12 ${ isNavbarOpen ? 'nav:h-screen': 'nav:h-[4.5rem]'} overflow-hidden relative transition-all duration-200`}>
         <button onClick={() => setIsNavbarOpen(!isNavbarOpen)} className="group absolute top-6 right-7 hidden nav:block w-8 space-y-1.5">
             <div className={`h-1 bg-black w-full rounded-full relative ${ isNavbarOpen && 'top-2.5 rotate-45' } group-hover:top-2.5 group-hover:rotate-45 transition-all duration-200`} />
             <div className={`h-1 bg-black w-full rounded-full relative ${ isNavbarOpen && 'opacity-0' } group-hover:opacity-0 transition-all duration-200`} />
@@ -108,7 +108,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </nav>
   )
 }
 
